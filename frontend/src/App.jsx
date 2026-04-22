@@ -17,7 +17,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/course-list' element={<CoursesList/>}/>
+       <Route path='/course-list/:input' element={<CoursesList/>}/>
         <Route path='/course/:id' element= {<CourseDetail/>}/>
         <Route path='/my-enrollments' element= {<MyEnrollments/>}/>
          <Route path='/player/:CourseId' element= {<Player/>}/>
@@ -26,8 +26,7 @@ function App() {
          <Route path='add-course' element={<AddCourse/>}/>
          <Route path='my-enrollments' element={<MyCourses/>}/>
          <Route path='student-enrolled' element={<StudentEnrolled/>}/>
-         <Route />
-         <Route/>
+
          </Route>
       </Routes>
     </div>
