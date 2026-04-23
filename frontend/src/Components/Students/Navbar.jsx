@@ -5,7 +5,7 @@ import { useClerk, UserButton, useUser } from '@clerk/clerk-react'
 import { AppContext } from '../../Context/AddContext'
 
 function Navbar() {
-  const { navigate } = useContext(AppContext)
+  const { navigate,isEducator } = useContext(AppContext)
   const [menuOpen, setMenuOpen] = useState(false)
 
   const location = useLocation()
@@ -38,8 +38,8 @@ function Navbar() {
 
           {user && (
             <>
-              <button className="hover:text-blue-600 transition">
-                Become Educator
+              <button onClick={()=>{navigate('/educator')}} className="hover:text-blue-600 transition">
+                {isEducator ? 'Educator Dashboard' : 'Become Educator'}
               </button>
 
               <span className="text-gray-300">|</span>
@@ -99,8 +99,8 @@ function Navbar() {
 
           {user && (
             <>
-              <button className="block">
-                Become Educator
+              <button onClick={()=>{navigate('/educator')}}className="block">
+                 {isEducator ? 'Educator Dashboard' : 'Become Educator'}
               </button>
 
               <Link to="/my-enrollments">

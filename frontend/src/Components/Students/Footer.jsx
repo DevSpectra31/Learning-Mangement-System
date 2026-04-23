@@ -10,7 +10,7 @@ function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-5">
             <img src={assets.logo} alt="logo" className="w-10" />
-            <h1 className="text-2xl font-semibold">Edemy</h1>
+            <h1 className="text-2xl font-semibold">LearnHub</h1>
           </div>
 
           <p className="text-gray-300 leading-7 max-w-sm">

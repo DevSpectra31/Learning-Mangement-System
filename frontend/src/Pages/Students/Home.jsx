@@ -4,6 +4,7 @@ import Hero from '../../Components/Students/Hero';
 import Companies from '../../Components/Students/Companies';
 import CoursesSection from '../../Components/Students/CoursesSection';
 import Footer from '../../Components/Students/Footer';
+import TestimonialSection from '../../Components/Students/TestimonialSection';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <Hero />
         <Companies />
         <CoursesSection />
+        <TestimonialSection/>
         <Footer/>
       </div>
     </div>
