@@ -5,6 +5,7 @@ import Companies from '../../Components/Students/Companies';
 import CoursesSection from '../../Components/Students/CoursesSection';
 import Footer from '../../Components/Students/Footer';
 import TestimonialSection from '../../Components/Students/TestimonialSection';
+import CalltoAction from '../../Components/Students/CalltoAction';
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <Companies />
         <CoursesSection />
         <TestimonialSection/>
+        <CalltoAction/>
         <Footer/>
       </div>
     </div>

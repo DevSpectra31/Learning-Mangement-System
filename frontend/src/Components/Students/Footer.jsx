@@ -1,65 +1,61 @@
 import React from "react";
-import { assets } from "../../assets/assets";
 
 function Footer() {
   return (
-    <footer className="bg-[#07142B] text-white px-6 md:px-20 lg:px-32 pt-14">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-gray-700">
+    <footer className="bg-gray-900 text-white pt-16 pb-8 px-6 md:px-16 lg:px-24">
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-10">
         
-        {/* Left Section */}
+        {/* Logo + About */}
         <div>
-          <div className="flex items-center gap-2 mb-5">
-            <img src={assets.logo} alt="logo" className="w-10" />
-            <h1 className="text-2xl font-semibold">LearnHub</h1>
-          </div>
-
-          <p className="text-gray-300 leading-7 max-w-sm">
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text.
+          <h2 className="text-3xl font-bold text-blue-400">
+            Edemy
+          </h2>
+          <p className="mt-4 text-gray-400 leading-relaxed text-sm">
+            Learn anything, anytime, anywhere. Build your skills with
+            high-quality courses designed by industry experts.
           </p>
         </div>
 
-        {/* Middle Section */}
+        {/* Quick Links */}
         <div>
-          <h2 className="text-lg font-semibold mb-5">Company</h2>
-          <ul className="space-y-3 text-gray-300">
-            <li className="cursor-pointer hover:text-white">Home</li>
-            <li className="cursor-pointer hover:text-white">About us</li>
-            <li className="cursor-pointer hover:text-white">Contact us</li>
-            <li className="cursor-pointer hover:text-white">Privacy policy</li>
+          <h3 className="text-xl font-semibold mb-4">
+            Quick Links
+          </h3>
+          <ul className="space-y-3 text-gray-400">
+            <li className="hover:text-white cursor-pointer transition">
+              Home
+            </li>
+            <li className="hover:text-white cursor-pointer transition">
+              Courses
+            </li>
+            <li className="hover:text-white cursor-pointer transition">
+              About
+            </li>
+            <li className="hover:text-white cursor-pointer transition">
+              Contact
+            </li>
           </ul>
         </div>
 
-        {/* Right Section */}
+        {/* Contact */}
         <div>
-          <h2 className="text-lg font-semibold mb-5">
-            Subscribe to our newsletter
-          </h2>
-
-          <p className="text-gray-300 mb-5 max-w-md">
-            The latest news, articles, and resources, sent to your inbox
-            weekly.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-[#13233F] border border-gray-600 px-4 py-3 rounded-md outline-none w-full text-white placeholder-gray-400"
-            />
-
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md font-medium">
-              Subscribe
-            </button>
-          </div>
+          <h3 className="text-xl font-semibold mb-4">
+            Contact Us
+          </h3>
+          <ul className="space-y-3 text-gray-400 text-sm">
+            <li>Email: support@edemy.com</li>
+            <li>Phone: +91 98765 43210</li>
+            <li>Location: Kanpur, India</li>
+          </ul>
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="text-center py-6 text-gray-300 text-sm">
-        Copyright 2024 © GreatStack. All Right Reserved.
+      {/* Bottom */}
+      <div className="text-center text-gray-500 text-sm mt-8">
+        © 2026 Edemy. All rights reserved.
       </div>
+      
     </footer>
   );
 }
