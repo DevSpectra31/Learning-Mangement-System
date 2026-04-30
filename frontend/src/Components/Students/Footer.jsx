@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -24,10 +25,10 @@ function Footer() {
           </h3>
           <ul className="space-y-3 text-gray-400">
             <li className="hover:text-white cursor-pointer transition">
-              Home
+              <Link to='/home'>Home</Link>
             </li>
             <li className="hover:text-white cursor-pointer transition">
-              Courses
+              <Link to ='/course-list'>Course</Link>
             </li>
             <li className="hover:text-white cursor-pointer transition">
               About
@@ -53,7 +54,7 @@ function Footer() {
 
       {/* Bottom */}
       <div className="text-center text-gray-500 text-sm mt-8">
-        © 2026 Edemy. All rights reserved.
+        <p>© {new Date().getFullYear()} Edemy. All rights reserved.</p>
       </div>
       
     </footer>

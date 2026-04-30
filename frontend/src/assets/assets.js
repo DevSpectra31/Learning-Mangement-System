@@ -1,5 +1,5 @@
-import logo from './Gemini_Generated_Image_x8sx34x8sx34x8sx.png'
 import logo_dark from './logo_dark.svg'
+import logo from "./logo.png"
 import search_icon from './search_icon.svg'
 import cross_icon from './cross_icon.svg'
 import upload_area from './upload_area.svg'

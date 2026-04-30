@@ -27,8 +27,8 @@ function Navbar() {
         {/* Logo */}
         <Link to="/">
           <img
-            src={assets.logo}
-            alt="Learnhub Logo"
+            src={assets.logo_dark}
+            alt="Edemy Logo"
             className="w-28 md:w-32 cursor-pointer"
           />
         </Link>
