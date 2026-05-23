@@ -8,31 +8,29 @@ function SearchBar({ data }) {
 
   const onsearchandler = (e) => {
     e.preventDefault()
-    navigate('/course-list/' + input)
+    navigate('/course-list?input=' + input)  // ✅ query param
   }
 
   return (
     <div>
-      <form 
+      <form
         onSubmit={onsearchandler}
         className='max-w-xl w-full md:h-14 h-12 flex items-center bg-white border border-gray-500/20 rounded'
       >
-        <img 
-          src={assets.search_icon} 
-          alt="search_icon" 
-          className='md:w-auto w-10 px-3' 
+        <img
+          src={assets.search_icon}
+          alt="search_icon"
+          className='md:w-auto w-10 px-3'
         />
-
-        <input 
+        <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Search for courses"
           className='w-full outline-none text-gray-700 placeholder-gray-500'
         />
-
-        <button 
-          type='submit' 
+        <button
+          type='submit'
           className='bg-blue-600 rounded text-white md:px-10 px-7 md:py-3 mx-1'
         >
           Search

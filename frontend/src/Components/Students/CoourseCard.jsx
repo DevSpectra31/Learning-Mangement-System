@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets'
 import { AppContext } from '../../Context/AddContext'
 import { Link } from 'react-router-dom'
 
-function CoourseCard({ course }) {
+function CourseCard({ course }) {
   const { currency ,calculateRating} = useContext(AppContext)
 
   const finalPrice =
@@ -59,4 +59,4 @@ function CoourseCard({ course }) {
   )
 }
 
-export default CoourseCard
+export default CourseCard
