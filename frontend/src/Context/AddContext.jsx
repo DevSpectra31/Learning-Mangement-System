@@ -3,7 +3,7 @@
 import { createContext, useEffect, useState } from "react";
 import { dummyCourses } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
-
+import humanizeDuration from 'humanize-duration'
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
@@ -27,12 +27,39 @@ export const AppContextProvider = ({ children }) => {
     })
     return totalRating / course.courseRatings.length
   }
+  //function to calculate to course chapter
+  const calculatechapterTime = (ch)=>{
+    let time = 0;
+    ch.chapterContent.map((lecture)=>time += lecture.lectureDuration)
+    return humanizeDuration(time * 60 * 1000 ,{units : ['h','m']})
+  }
+  //course duration 
+  const calculateCourseDuration = (course)=>{
+    let time = 0;
+    course.courseContent.map((chapter)=>chapter.chapterContent.map(
+      (lecture)=> time+= lecture.lectureDuration
+    ))
+    return humanizeDuration(time * 60 * 1000 , {units :['h','m']})
+  }
+  //no of lectures
+  const calculateLectures=(course)=>{
+    let totallectures=0;
+    course.courseContent.forEach(chapter =>{
+      if(Array.isArray(chapter.chapterContent)){
+        totallectures += chapter.chapterContent.length
+      }
+    })
+    return totallectures;
+  }
   useEffect(() => {
     fetchAllCourses();
   }, []);
 
   const value = {
     currency,
+    calculateCourseDuration,
+    calculateLectures,
+    calculatechapterTime,
     allCourses,
     navigate,
     calculateRating,

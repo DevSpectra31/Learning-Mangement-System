@@ -29,7 +29,7 @@ function CourseCard({ course }) {
         </h3>
 
         <p className="text-sm text-gray-500 mt-2">
-          {course.educator.name}
+          TanStack
         </p>
 
         <div className="flex items-center gap-2 mt-3">
